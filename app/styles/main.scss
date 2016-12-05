@@ -12,6 +12,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background-color: #66afe9;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -60,6 +61,9 @@ body {
   p + h4 {
     margin-top: 28px;
   }
+}
+.back{
+  background-color: #66afe9;
 }
 
 /* Responsive: Portrait tablets and up */

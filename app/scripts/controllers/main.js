@@ -8,12 +8,10 @@
  * Controller of the mpApp
  */
 angular.module('mpApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
-    console.log("Main controller");
   });

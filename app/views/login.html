@@ -1,0 +1,62 @@
+<div class="row col-md-offset-3 col-md-5 ">
+  <form name="login" ng-submit="submit()" novalidate>
+    <fieldset class="well">
+      <div class="form-group">
+        <label >FirstName</label>
+        <input type="text" ng-model="user.first_name"
+               class="form-control"
+               id="inputFirstName"
+               name="userFirstName"
+               placeholder="FirstName"
+               ng-minlength="3"
+               ng-maxlength="8"
+               required/>
+        <div ng-messages="login.userFirstName.$error" ng-show="login.userFirstName.$dirty">
+          <div ng-message="required">This field is required</div>
+          <div ng-message="minlength">The first name should be minimum 3 characters</div>
+          <div ng-message="maxlength">The first name should exceeds 8 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" ng-model="user.mobile"
+               name="userMobile"
+               class="form-control"
+               id="inputMobile" placeholder="Phone"
+               ng-pattern="/^[0-9]{1,10}$/" required/>
+        <div ng-messages="login.userMobile.$error" ng-show="login.userMobile.$dirty">
+          <div ng-message="required">This field is required</div>
+          <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label >Email</label>
+        <br>
+        <input type="text"
+               ng-model="user.email"
+               class="form-control"
+               id="inputEmail" placeholder="Email"/>
+      </div>
+      <div class="form-group">
+        <label >Password</label>
+        <br>
+        <input type="password" ng-model="user.password" class="form-control" id="inputPassword" placeholder="Password"/>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"/> Remember me
+        </label>
+      </div>
+      <div class="row text-center">
+        <input type="submit" id="submit" class="btn btn-primary " value="Submit" />
+        <input type="button" id="cancel" class="btn btn-primary " value="Cancel" />
+      </div>
+    </fieldset>
+
+  </form>
+
+  <div class="well new-account">
+    <label> New to Mail? </label>
+    <a href="#c_account" class="text-center">create new account</a>
+  </div>
+</div>
